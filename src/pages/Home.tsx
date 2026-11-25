@@ -1,13 +1,7 @@
 import { Link } from "react-router"
 import { CalendarIcon, GlobeIcon, PhoneIcon } from "lucide-react"
 
-import {
-  CtaBand,
-  CtaGroup,
-  Section,
-  cta,
-  usePageTitle,
-} from "@/components/page"
+import { CtaBand, CtaGroup, Section, cta } from "@/components/page"
 import { TreatmentPhotoTile } from "@/components/treatment-card"
 import { PHONE, steps } from "@/site"
 import { treatments } from "@/treatments"
@@ -20,10 +14,6 @@ const stats = [
 ] as const
 
 export default function Home() {
-  usePageTitle(
-    "Neurosurgeon in Vijayawada",
-    "Dr. Mohammad Abdul Ameen, neurosurgeon in Vijayawada. Brain and spine surgery for adults and children. Clinic at Benz Circle, open 6 PM to 8 PM."
-  )
   return (
     <>
       <section className="mx-auto grid max-w-5xl gap-10 px-5 pt-10 pb-16 md:pt-16 md:pb-20 lg:grid-cols-[1.1fr_.9fr] lg:items-stretch lg:gap-16">
@@ -50,6 +40,7 @@ export default function Home() {
         <img
           src="/images/dr-ameen.jpg"
           alt="Dr. Mohammad Abdul Ameen, neurosurgeon"
+          fetchPriority="high"
           width={996}
           height={932}
           className="aspect-[4/3] w-full rounded-3xl bg-secondary object-cover object-[50%_15%] md:aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[400px]"

@@ -10,19 +10,12 @@ import {
   TriangleAlertIcon,
 } from "lucide-react"
 
-import { CtaBand, CtaGroup, cta, usePageTitle } from "@/components/page"
+import { BannerPhoto, PageBanner } from "@/components/banner"
+import { CtaBand, CtaGroup, cta } from "@/components/page"
 import { TreatmentMiniTile } from "@/components/treatment-card"
 import { useImageReady } from "@/components/treatment-image"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 import {
   Card,
   CardContent,
@@ -39,10 +32,6 @@ export default function TreatmentDetail() {
   const { slug } = useParams()
   const t = bySlug(slug)
   const hasPhoto = useImageReady(treatmentImage(t?.title ?? ""))
-  usePageTitle(
-    t?.title ?? "Treatment not found",
-    t ? `${t.title} in Vijayawada. ${t.summary}` : undefined
-  )
   if (!t) return <NotFound />
 
   const at = treatments.indexOf(t)
@@ -52,64 +41,32 @@ export default function TreatmentDetail() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-muted pt-6 pb-10 md:pb-16">
-        <div className="mx-auto max-w-5xl px-5">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink render={<Link to="/" />}>Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink render={<Link to="/treatments" />}>
-                  Treatments
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{t.title}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-
-          <div
-            className={`mt-8 grid gap-8 ${hasPhoto ? "lg:grid-cols-[1.1fr_.9fr] lg:gap-x-14 lg:gap-y-6" : "max-w-3xl"}`}
-          >
-            <div className="flex flex-col items-start gap-4">
-              <Badge
-                variant="secondary"
-                className="h-7 bg-background px-3 text-sm"
-              >
-                Treatment
-              </Badge>
-              <h1 className="text-4xl font-extrabold md:text-6xl">{t.title}</h1>
-              <p className="text-xl text-muted-foreground">{t.summary}</p>
-            </div>
-            {hasPhoto && (
-              <img
-                src={treatmentImage(t.title)}
-                alt=""
-                style={{ objectPosition: t.focus ?? "50% 30%" }}
-                className="aspect-[16/9] w-full rounded-3xl bg-secondary object-cover lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:aspect-auto lg:h-full lg:min-h-72"
-              />
-            )}
-            <div className="flex flex-col gap-6">
-              <p className="text-lg text-muted-foreground">{t.intro}</p>
-              <CtaGroup>
-                <Link to="/book" className={cta()}>
-                  <CalendarIcon data-icon="inline-start" />
-                  Book a visit
-                </Link>
-                <a href={`tel:${PHONE}`} className={cta("secondary")}>
-                  <PhoneIcon data-icon="inline-start" />
-                  Call us
-                </a>
-              </CtaGroup>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        trail={[
+          ["Home", "/"],
+          ["Treatments", "/treatments"],
+        ]}
+        current={t.title}
+        title={t.title}
+        lead={t.summary}
+        art={
+          hasPhoto ? (
+            <BannerPhoto src={treatmentImage(t.title)} focus={t.focus} />
+          ) : undefined
+        }
+      >
+        <p className="text-lg text-pretty text-muted-foreground">{t.intro}</p>
+        <CtaGroup>
+          <Link to="/book" className={cta()}>
+            <CalendarIcon data-icon="inline-start" />
+            Book a visit
+          </Link>
+          <a href={`tel:${PHONE}`} className={cta("secondary")}>
+            <PhoneIcon data-icon="inline-start" />
+            Call us
+          </a>
+        </CtaGroup>
+      </PageBanner>
 
       {/* Details */}
       <div className="mx-auto grid max-w-5xl gap-12 px-5 py-14 md:py-20 lg:grid-cols-[1fr_20rem] lg:gap-16">

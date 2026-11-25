@@ -1,14 +1,8 @@
 import { Link } from "react-router"
 import { ArrowRightIcon, MailIcon, MessageCircleIcon } from "lucide-react"
 
-import {
-  CtaBand,
-  CtaGroup,
-  PageHead,
-  Section,
-  cta,
-  usePageTitle,
-} from "@/components/page"
+import { PageBanner } from "@/components/banner"
+import { CtaBand, CtaGroup, Section, cta } from "@/components/page"
 import {
   Accordion,
   AccordionContent,
@@ -43,17 +37,16 @@ const faqs = [
 ] as const
 
 export default function International() {
-  usePageTitle(
-    "International patients",
-    "Living abroad? Send your MRI, CT scans and reports to Dr. Ameen in Vijayawada and get an opinion before you plan travel."
-  )
   return (
     <>
-      <PageHead
+      <PageBanner
+        trail={[["Home", "/"]]}
+        current="International patients"
         title="Living abroad? Start with your reports"
         lead="Send your scans first. You will know what to expect before you plan any travel."
       />
-      <Section flush>
+      <Section>
+        <h2 className="sr-only">How it works</h2>
         <div className="grid gap-4 md:grid-cols-3">
           {steps.map(([title, text], i) => (
             <Card key={title} className="bg-muted ring-0">

@@ -1,4 +1,4 @@
-import { useEffect, type ReactNode } from "react"
+import type { ReactNode } from "react"
 import { Link } from "react-router"
 import { CalendarIcon, ClockIcon, MapPinIcon, PhoneIcon } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
@@ -37,28 +37,6 @@ export function CtaGroup({
     >
       {children}
     </div>
-  )
-}
-
-export function usePageTitle(title: string, description?: string) {
-  useEffect(() => {
-    document.title = `${title} | Dr. Ameen's Brain and Spine Clinic, Vijayawada`
-    if (description) {
-      document
-        .querySelector('meta[name="description"]')
-        ?.setAttribute("content", description)
-    }
-  }, [title, description])
-}
-
-export function PageHead({ title, lead }: { title: string; lead?: string }) {
-  return (
-    <section className="mx-auto max-w-5xl px-5 pt-12 pb-10 md:pt-24 md:pb-16">
-      <h1 className="max-w-3xl text-4xl font-extrabold md:text-6xl">{title}</h1>
-      {lead && (
-        <p className="mt-5 max-w-xl text-lg text-muted-foreground">{lead}</p>
-      )}
-    </section>
   )
 }
 

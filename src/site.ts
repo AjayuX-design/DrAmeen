@@ -7,16 +7,81 @@ export const MAP =
   "https://www.google.com/maps/search/?api=1&query=Opp+Grand+Modern+Super+Market+Benz+Circle+Vijayawada"
 
 export const steps = [
-  ["Send your reports", "Share your MRI, CT scans and reports on WhatsApp or email with a short note."],
-  ["Get an opinion", "The clinic reviews your case and tells you what the options are."],
-  ["Plan your visit", "If you decide to come, we help you pick a date and tell you what to bring."],
+  [
+    "Send your reports",
+    "Share your MRI, CT scans and reports on WhatsApp or email with a short note.",
+  ],
+  [
+    "Get an opinion",
+    "The clinic reviews your case and tells you what the options are.",
+  ],
+  [
+    "Plan your visit",
+    "If you decide to come, we help you pick a date and tell you what to bring.",
+  ],
 ] as const
 
-export const credentials = [
-  ["Training", ["MCh Neurosurgery, SVIMS Tirupati (2014)", "MS General Surgery, KIMS Karad (2010)", "MBBS (2000)", "Residency, Apollo Hospitals, Hyderabad"]],
-  ["Fellowships", ["FCVS, cerebrovascular, endovascular and skull base surgery, Fujita Health University, Japan (2018)", "FICS, International College of Surgeons, Chicago (2018)", "Advanced Neuroendoscopy, Jabalpur (2019)"]],
-  ["Career", ["Consultant Neurosurgeon, Union Hospitals, Vijayawada (2021 to now)", "Consultant Neurosurgeon, Srikara, Aayush NRI and Jayshree Liberty Hospitals (2015 to 2021)", "Assistant Professor and Tutor, NRI Academy of Medical Sciences"]],
-  ["Research and societies", ["9 published papers, mainly in the Asian Journal of Neurosurgery", "Best poster award, AP NEUROCON 2013", "Member of NSI, EANS, AO Spine, WEDNS, APNSA, NSSA and NSV"]],
+/** [year, what, where] from the resume, newest first. */
+export const education = [
+  [
+    "2019",
+    "Fellowship in advanced neuroendoscopy",
+    "Netaji Subhash Chandra Bose Medical College, Jabalpur",
+  ],
+  [
+    "2018",
+    "FCVS: cerebrovascular, endovascular and skull base surgery",
+    "Fujita Health University, Nagoya, Japan",
+  ],
+  [
+    "2018",
+    "FICS: Fellow of the International College of Surgeons",
+    "Chicago, USA",
+  ],
+  ["2017", "Spine Masters teaching course", "Dr. Ramani, Mumbai"],
+  [
+    "2014",
+    "MCh in Neurosurgery",
+    "Sri Venkateswara Institute of Medical Sciences, Tirupati",
+  ],
+  ["2014", "Walter E. Dandy educational neurosurgical course", "Mamallapuram"],
+  [
+    "2010",
+    "MS in General Surgery",
+    "Krishna Institute of Medical Sciences, Karad",
+  ],
+  ["2000", "MBBS", "Al-Ameen Medical College"],
+] as const
+
+export const career = [
+  ["From 2021", "Consultant Neurosurgeon", "Union Hospitals, Vijayawada"],
+  ["2020 to 2021", "Consultant Neurosurgeon", "Srikara Hospitals, Vijayawada"],
+  [
+    "2015 to 2020",
+    "Consultant Neurosurgeon",
+    "Aayush NRI Healthcare, Vijayawada",
+  ],
+  ["2015", "Consultant Neurosurgeon", "Jayshree Liberty Hospitals, Vijayawada"],
+  [
+    "2014 to 2015",
+    "Senior Resident, Neurosurgery",
+    "Andhra Pradesh state government, Vijayawada",
+  ],
+  [
+    "2011",
+    "Assistant Professor, General Surgery",
+    "NRI Academy of Medical Sciences, Chinakakani",
+  ],
+  [
+    "2005 to 2007",
+    "Tutor, Neurosurgery",
+    "NRI Academy of Medical Sciences, Chinakakani",
+  ],
+  [
+    "2002 to 2004",
+    "Junior Resident, Neurosurgery",
+    "Apollo Hospitals, Hyderabad",
+  ],
 ] as const
 
 export const nav = [
@@ -58,4 +123,8 @@ export const societies = [
 
 /** Treatment photo path from the title, e.g. "Pediatric neurosurgery" -> /images/treatments/pediatric-neurosurgery.jpg */
 export const treatmentImage = (title: string) =>
-  `/images/treatments/${title.toLowerCase().replace(/'/g, "").replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "")}.jpg`
+  `/images/treatments/${title
+    .toLowerCase()
+    .replace(/'/g, "")
+    .replace(/[^a-z]+/g, "-")
+    .replace(/^-|-$/g, "")}.jpg`

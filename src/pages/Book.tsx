@@ -7,13 +7,8 @@ import {
   PhoneIcon,
 } from "lucide-react"
 
-import {
-  CtaGroup,
-  PageHead,
-  Section,
-  cta,
-  usePageTitle,
-} from "@/components/page"
+import { PageBanner } from "@/components/banner"
+import { CtaGroup, Section, cta } from "@/components/page"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -30,10 +25,6 @@ import { EMAIL, MAP, PHONE, PHONE_SHOW, wa } from "@/site"
 const today = new Date().toISOString().slice(0, 10)
 
 export default function Book() {
-  usePageTitle(
-    "Book a visit",
-    "Request an appointment with Dr. Ameen at Benz Circle, Vijayawada. Clinic hours 6 PM to 8 PM. Call or WhatsApp 99486 58699."
-  )
   const submit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const d = new FormData(e.currentTarget)
@@ -42,12 +33,14 @@ export default function Book() {
   }
   return (
     <>
-      <PageHead
+      <PageBanner
+        trail={[["Home", "/"]]}
+        current="Book a visit"
         title="Book a visit"
         lead="Fill in the form. It opens WhatsApp with your details ready to send, and the clinic will confirm your slot."
       />
-      <Section tint className="grid gap-10 md:grid-cols-[1.1fr_.9fr] md:gap-16">
-        <Card>
+      <Section className="grid gap-10 md:grid-cols-[1.1fr_.9fr] md:gap-16">
+        <Card className="bg-muted ring-0">
           <CardContent>
             <form onSubmit={submit}>
               <FieldGroup>

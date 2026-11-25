@@ -15,6 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { useSeo } from "@/lib/use-seo"
 import { EMAIL, PHONE, PHONE_SHOW, nav, wa } from "@/site"
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
@@ -169,6 +170,7 @@ export function Layout() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [pathname])
+  useSeo(pathname)
   return (
     <div className="flex min-h-svh flex-col">
       <a
