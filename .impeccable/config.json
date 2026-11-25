@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-25T19:29:50.097Z",
+        "reason": "user confirmed: picked Manrope and Inter (option H) for mobile readability"
+      }
+    ]
+  }
+}

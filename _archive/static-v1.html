@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b5fa5">
+<title>Dr. Mohammad Abdul Ameen | Neurosurgeon in Vijayawada | Brain and Spine Clinic</title>
+<meta name="description" content="Dr. Ameen's Brain and Spine Clinic, Benz Circle, Vijayawada. Neurosurgeon with 20+ years of experience and 5000+ surgeries. Book a visit or send your reports from abroad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0b5fa5; --blue-d:#084a84; --teal:#19a7a0; --teal-t:#0d7771;
+  --tint:#e8f2fa; --ink:#12263a; --muted:#44586b; --line:#d8e4ee; --white:#fff;
+  --wa:#117a3d;
+  --head:Manrope,system-ui,sans-serif; --body:Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{font:400 16px/1.6 var(--body);color:var(--ink);background:var(--white);padding-bottom:80px}
+h1,h2,h3{font-family:var(--head);color:var(--ink);line-height:1.2;letter-spacing:-.01em}
+h1{font-size:34px;font-weight:700}
+h2{font-size:26px;font-weight:700;margin-bottom:12px}
+h3{font-size:18px;font-weight:600;margin-bottom:4px}
+a{color:inherit}
+.wrap{padding:0 20px;max-width:1080px;margin:0 auto}
+section{padding:56px 0}
+.lead{color:var(--muted);font-size:17px}
+.alt{background:var(--tint)}
+
+/* buttons: 52px tall for easy tapping */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 24px;border-radius:12px;font:600 16px var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .15s}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:active,.btn-blue:hover{background:var(--blue-d)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-line{border-color:var(--blue);color:var(--blue);background:#fff}
+.btn-block{width:100%}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 16px/1.15 var(--head);text-decoration:none;color:var(--blue)}
+.logo small{display:block;font:500 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.menu{display:none;gap:28px;list-style:none;padding:0}
+.menu a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted)}
+.menu a:hover{color:var(--blue)}
+.hbtn{min-height:44px;padding:0 20px;font-size:15px}
+
+/* hero */
+.hero{padding:32px 0 48px}
+.hero .lead{margin:16px 0 24px}
+.cta{display:grid;gap:12px}
+.photo{margin-top:32px;aspect-ratio:4/5;border-radius:20px;background:var(--tint);border:1px solid var(--line);display:grid;place-items:center;position:relative;overflow:hidden;color:var(--blue);font:700 72px var(--head);max-width:420px}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.stats b{display:block;font:700 26px var(--head);color:var(--blue)}
+.stats span{font-size:13px;line-height:1.35;color:var(--muted);display:block}
+
+/* quick info */
+.info{display:grid;gap:0;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}
+.info div{padding:16px 20px;border-bottom:1px solid var(--line)}
+.info div:last-child{border:0}
+.info b{display:block;font:600 12px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--teal-t);margin-bottom:4px}
+
+/* lists */
+.list{display:grid;gap:12px;margin-top:24px}
+.item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.item p{color:var(--muted);font-size:15px}
+.alt .item{border-color:transparent}
+.n{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--tint);color:var(--blue);font:700 14px var(--head);margin-bottom:12px}
+.alt .n{background:var(--blue);color:#fff}
+
+/* about */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.chips span{background:var(--tint);color:var(--blue-d);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500}
+details{border-top:1px solid var(--line);padding:4px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;min-height:52px;display:flex;align-items:center;justify-content:space-between;font:600 16px var(--head)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:500 24px var(--body);color:var(--blue)}
+details[open] summary::after{content:"\2212"}
+details ul{padding:0 0 16px 20px;color:var(--muted);font-size:15px;display:grid;gap:8px}
+
+/* form */
+form{display:grid;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:24px}
+label{display:grid;gap:6px;font-size:14px;font-weight:600}
+input,select,textarea{font:400 16px var(--body);min-height:52px;padding:12px 16px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);width:100%}
+textarea{min-height:96px;resize:vertical}
+.note{font-size:13px;color:var(--muted)}
+
+footer{background:var(--ink);color:#c9d6e2;padding:32px 0;font-size:14px}
+footer a{color:#fff}
+footer .wrap{display:grid;gap:8px}
+
+/* fixed action bar, mobile only */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 16px rgba(18,38,58,.08)}
+.dock .btn{min-height:48px;padding:0 8px;font-size:15px;border-radius:10px}
+
+/* tablet and up */
+@media(min-width:720px){
+  body{padding-bottom:0}
+  .dock{display:none}
+  .menu{display:flex}
+  section{padding:88px 0}
+  h1{font-size:52px}
+  h2{font-size:36px}
+  .hero{padding:64px 0 88px}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .photo{margin:0;max-width:none}
+  .cta{display:flex}
+  .cta .btn{flex:0 0 auto}
+  .list{grid-template-columns:repeat(2,1fr)}
+  .info{grid-template-columns:repeat(3,1fr)}
+  .info div{border-bottom:0;border-right:1px solid var(--line)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  form{margin-top:0}
+}
+@media(min-width:1024px){.list.three{grid-template-columns:repeat(3,1fr)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Dr. Ameen's<small>Brain and Spine Clinic</small></a>
+    <ul class="menu">
+      <li><a href="#treatments">Treatments</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#international">International</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-blue hbtn" href="#book">Book a visit</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Expert care for your brain and spine</h1>
+      <p class="lead">Dr. Mohammad Abdul Ameen is a neurosurgeon in Vijayawada. He treats adults and children with clear advice, careful surgery and honest follow up.</p>
+      <div class="cta">
+        <a class="btn btn-blue" href="#book">Book a visit</a>
+        <a class="btn btn-line" href="tel:+919948658699">Call 99486 58699</a>
+      </div>
+      <div class="stats">
+        <div><b>20+</b><span>years of experience</span></div>
+        <div><b>5,000+</b><span>brain and spine surgeries</span></div>
+        <div><b>3</b><span>fellowships abroad and in India</span></div>
+      </div>
+    </div>
+    <!-- Photo: replace the div below with <img src="images/dr-ameen.jpg" alt="Dr. Mohammad Abdul Ameen"> -->
+    <div class="photo" role="img" aria-label="Photo of Dr. Ameen">MA</div>
+  </div>
+</section>
+
+<section class="alt" style="padding:32px 0">
+  <div class="wrap">
+    <div class="info">
+      <div><b>Clinic hours</b>6 PM to 8 PM</div>
+      <div><b>Location</b>Opp. Grand Modern Super Market, Benz Circle, Vijayawada</div>
+      <div><b>Phone and WhatsApp</b><a href="tel:+919948658699">99486 58699</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="treatments">
+  <div class="wrap">
+    <h2>What we treat</h2>
+    <p class="lead">From back pain to complex brain surgery, you get a clear diagnosis and a plan you understand.</p>
+    <div class="list three">
+      <article class="item"><span class="n">1</span><h3>Spine surgery</h3><p>Slipped disc, narrow spinal canal, spinal tuberculosis, fractures and spinal tumors.</p></article>
+      <article class="item"><span class="n">2</span><h3>Endoscopic spine surgery</h3><p>Smaller cuts, less pain and a faster return to daily life, where it is safe.</p></article>
+      <article class="item"><span class="n">3</span><h3>Brain tumors</h3><p>Diagnosis and surgery for brain and skull base tumors.</p></article>
+      <article class="item"><span class="n">4</span><h3>Vascular neurosurgery</h3><p>Brain aneurysms, bleeding in the brain and cavernomas.</p></article>
+      <article class="item"><span class="n">5</span><h3>Head and spine injury</h3><p>Care after accidents and falls, with proper follow up.</p></article>
+      <article class="item"><span class="n">6</span><h3>Children's neurosurgery</h3><p>Hydrocephalus and other brain and spine problems in children.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="alt">
+  <div class="wrap two">
+    <div>
+      <h2>Dr. Mohammad Abdul Ameen</h2>
+      <p class="lead">Consultant Neurosurgeon at Union Hospitals, Vijayawada. He has performed or assisted in more than 5,000 adult and pediatric brain and spine surgeries, and he teaches medical students and junior doctors.</p>
+      <div class="chips">
+        <span>MBBS</span><span>MS General Surgery</span><span>MCh Neurosurgery</span><span>FICS (USA)</span><span>FCVS (Japan)</span>
+      </div>
+      <p class="note">Medical Council of India Reg. No. 47206</p>
+    </div>
+    <div style="margin-top:24px">
+      <details open>
+        <summary>Training</summary>
+        <ul>
+          <li>MCh Neurosurgery, SVIMS Tirupati (2014)</li>
+          <li>MS General Surgery, KIMS Karad (2010)</li>
+          <li>MBBS (2000)</li>
+          <li>Residency, Apollo Hospitals, Hyderabad</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Fellowships</summary>
+        <ul>
+          <li>FCVS, cerebrovascular, endovascular and skull base surgery, Fujita Health University, Japan (2018)</li>
+          <li>FICS, International College of Surgeons, Chicago (2018)</li>
+          <li>Advanced Neuroendoscopy, Jabalpur (2019)</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Career</summary>
+        <ul>
+          <li>Consultant Neurosurgeon, Union Hospitals, Vijayawada (2021 to now)</li>
+          <li>Consultant Neurosurgeon, Srikara, Aayush NRI and Jayshree Liberty Hospitals (2015 to 2021)</li>
+          <li>Assistant Professor and Tutor, NRI Academy of Medical Sciences</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Research and societies</summary>
+        <ul>
+          <li>9 published papers, mainly in the Asian Journal of Neurosurgery</li>
+          <li>Best poster award, AP NEUROCON 2013</li>
+          <li>Member of NSI, EANS, AO Spine, WEDNS, APNSA, NSSA and NSV</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="international">
+  <div class="wrap">
+    <h2>Living abroad? Start with your reports</h2>
+    <p class="lead">Send your scans first. You will know what to expect before you plan any travel.</p>
+    <div class="list three">
+      <article class="item"><span class="n">1</span><h3>Send your reports</h3><p>Share your MRI, CT scans and reports on WhatsApp or email with a short note.</p></article>
+      <article class="item"><span class="n">2</span><h3>Get an opinion</h3><p>The clinic reviews your case and tells you what the options are.</p></article>
+      <article class="item"><span class="n">3</span><h3>Plan your visit</h3><p>If you decide to come, we help you pick a date and tell you what to bring.</p></article>
+    </div>
+    <div class="cta" style="margin-top:24px">
+      <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/919948658699?text=Hello%2C%20I%20am%20writing%20from%20abroad%20and%20would%20like%20an%20opinion%20on%20my%20reports.">Send reports on WhatsApp</a>
+      <a class="btn btn-line" href="mailto:drmaameen@gmail.com">Email the clinic</a>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="alt">
+  <div class="wrap two">
+    <div>
+      <h2>Request an appointment</h2>
+      <p class="lead">Fill in the form. It opens WhatsApp with your details ready to send, and the clinic will confirm your slot.</p>
+    </div>
+    <form id="bookForm">
+      <label>Full name<input name="name" required autocomplete="name"></label>
+      <label>Phone number<input name="phone" type="tel" inputmode="tel" required autocomplete="tel" placeholder="99486 58699"></label>
+      <label>Preferred date<input name="date" type="date" required></label>
+      <label>Visit type
+        <select name="type">
+          <option>Clinic visit</option>
+          <option>Video consultation</option>
+          <option>Opinion on reports (international)</option>
+        </select>
+      </label>
+      <label>What is the problem?<textarea name="issue" placeholder="Back pain with leg numbness for 3 months"></textarea></label>
+      <button class="btn btn-wa btn-block" type="submit">Continue on WhatsApp</button>
+      <p class="note">In an emergency, go to the nearest hospital. Do not wait for an appointment.</p>
+    </form>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <h2>Dr. Ameen's Brain and Spine Clinic</h2>
+    <p class="lead">Opp. Grand Modern Super Market, Benz Circle, Vijayawada.<br>Open 6 PM to 8 PM.</p>
+    <div class="cta" style="margin-top:24px">
+      <a class="btn btn-blue" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Opp+Grand+Modern+Super+Market+Benz+Circle+Vijayawada">Get directions</a>
+      <a class="btn btn-line" href="tel:+919948658699">Call the clinic</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong style="color:#fff">Dr. Ameen's Brain and Spine Clinic</strong>
+    <span>Benz Circle, Vijayawada, Andhra Pradesh</span>
+    <span><a href="tel:+919948658699">+91 99486 58699</a> | <a href="mailto:drmaameen@gmail.com">drmaameen@gmail.com</a></span>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a class="btn btn-line" href="tel:+919948658699">Call</a>
+  <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/919948658699?text=Hello%20Dr.%20Ameen%27s%20clinic%2C%20I%20would%20like%20to%20book%20an%20appointment.">WhatsApp</a>
+  <a class="btn btn-blue" href="#book">Book</a>
+</nav>
+
+<script>
+const f=document.getElementById('bookForm');
+f.date.min=new Date().toISOString().slice(0,10);
+f.addEventListener('submit',e=>{
+  e.preventDefault();
+  const d=new FormData(f);
+  const msg=`Appointment request\nName: ${d.get('name')}\nPhone: ${d.get('phone')}\nDate: ${d.get('date')}\nType: ${d.get('type')}\nProblem: ${d.get('issue')||'-'}`;
+  window.open('https://wa.me/919948658699?text='+encodeURIComponent(msg),'_blank','noopener');
+});
+</script>
+</body>
+</html>

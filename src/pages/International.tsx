@@ -1,0 +1,116 @@
+import { Link } from "react-router"
+import { ArrowRightIcon, MailIcon, MessageCircleIcon } from "lucide-react"
+
+import {
+  CtaBand,
+  CtaGroup,
+  PageHead,
+  Section,
+  cta,
+  usePageTitle,
+} from "@/components/page"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { EMAIL, steps, wa } from "@/site"
+
+const faqs = [
+  [
+    "What should I send?",
+    "Your MRI and CT scans, your medical reports, a list of your medicines, and a short note about your problem and when it started.",
+  ],
+  [
+    "How do I send it?",
+    "Send it on WhatsApp or by email. Large scan files can be shared with a download link.",
+  ],
+  [
+    "Can I have a video consultation?",
+    "You can choose video consultation in the booking form. The clinic will confirm if it suits your case.",
+  ],
+  [
+    "When should I travel?",
+    "Wait for the opinion on your reports first. Then pick a date with the clinic. Clinic hours are 6 PM to 8 PM.",
+  ],
+] as const
+
+export default function International() {
+  usePageTitle(
+    "International patients",
+    "Living abroad? Send your MRI, CT scans and reports to Dr. Ameen in Vijayawada and get an opinion before you plan travel."
+  )
+  return (
+    <>
+      <PageHead
+        title="Living abroad? Start with your reports"
+        lead="Send your scans first. You will know what to expect before you plan any travel."
+      />
+      <Section flush>
+        <div className="grid gap-4 md:grid-cols-3">
+          {steps.map(([title, text], i) => (
+            <Card key={title} className="bg-muted ring-0">
+              <CardHeader>
+                <span className="mb-2 grid size-9 place-items-center rounded-full bg-primary font-heading text-sm font-bold text-primary-foreground">
+                  {i + 1}
+                </span>
+                <CardTitle className="font-heading text-lg font-semibold">
+                  {title}
+                </CardTitle>
+                <CardDescription className="text-[15px]">
+                  {text}
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+        <CtaGroup className="mt-8">
+          <a
+            className={cta()}
+            target="_blank"
+            rel="noopener"
+            href={wa(
+              "Hello, I am writing from abroad and would like an opinion on my reports."
+            )}
+          >
+            <MessageCircleIcon data-icon="inline-start" />
+            Send reports on WhatsApp
+          </a>
+          <a className={cta("secondary")} href={`mailto:${EMAIL}`}>
+            <MailIcon data-icon="inline-start" />
+            Email the clinic
+          </a>
+        </CtaGroup>
+      </Section>
+      <Section tint className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
+        <div className="flex flex-col gap-6">
+          <h2 className="text-3xl font-bold md:text-5xl">Common questions</h2>
+          <CtaGroup>
+            <Link to="/book" className={cta("secondary")}>
+              Book a visit instead
+              <ArrowRightIcon data-icon="inline-end" />
+            </Link>
+          </CtaGroup>
+        </div>
+        <Accordion defaultValue={[faqs[0][0]]}>
+          {faqs.map(([q, a]) => (
+            <AccordionItem key={q} value={q}>
+              <AccordionTrigger>{q}</AccordionTrigger>
+              <AccordionContent>
+                <p className="text-[15px] text-muted-foreground">{a}</p>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </Section>
+      <CtaBand />
+    </>
+  )
+}
