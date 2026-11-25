@@ -67,6 +67,18 @@ for (const page of pages) {
   writeFileSync(file, render(page))
 }
 
+// A real 404 page: the app shows its "not found" screen, search engines are told not to index it.
+writeFileSync(
+  join(dist, "404.html"),
+  template
+    .replace(/<title>[\s\S]*?<\/title>/, "<title>Page not found | Dr. Ameen's Brain and Spine Clinic</title>")
+    .replace("</head>", '<meta name="robots" content="noindex" /></head>')
+    .replace(
+      '<div id="root"></div>',
+      `<div id="root"><noscript><main><h1>We can't find that page</h1><p><a href="/">Go to the home page</a></p></main></noscript></div>`,
+    ),
+)
+
 const today = new Date().toISOString().slice(0, 10)
 const sitemap =
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
@@ -74,5 +86,5 @@ const sitemap =
   `\n</urlset>\n`
 writeFileSync(join(dist, "sitemap.xml"), sitemap)
 
-console.log(`postbuild: wrote ${pages.length} pages and sitemap.xml`)
+console.log(`postbuild: wrote ${pages.length} pages, 404.html and sitemap.xml`)
 for (const w of warnings) console.warn(`postbuild warning: ${w}`)
