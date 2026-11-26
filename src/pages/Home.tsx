@@ -19,7 +19,7 @@ export default function Home() {
       <section className="mx-auto grid max-w-5xl gap-10 px-5 pt-10 pb-16 md:pt-16 md:pb-20 lg:min-h-[calc(100svh-4rem)] lg:grid-cols-[1.1fr_.9fr] lg:items-center lg:gap-16">
         <div className="flex flex-col gap-6 lg:justify-center">
           <h1 className="text-[2.5rem] font-extrabold md:text-6xl">
-            Brain and spine neurosurgeon in Vijayawada
+            Brain and spine surgeon in Vijayawada
           </h1>
           <p className="max-w-md text-lg text-muted-foreground">
             Dr. Mohammad Abdul Ameen treats adults and children with clear

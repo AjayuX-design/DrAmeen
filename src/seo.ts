@@ -34,7 +34,7 @@ export const pages: Seo[] = [
     description:
       "Brain and spine surgery for adults and children at Benz Circle, Vijayawada. 20+ years of experience. Open Monday to Saturday, 6 PM to 8 PM.",
     image: OG_DEFAULT,
-    h1: "Brain and spine neurosurgeon in Vijayawada",
+    h1: "Brain and spine surgeon in Vijayawada",
     paragraphs: [
       "Dr. Mohammad Abdul Ameen is a neurosurgeon in Vijayawada. He treats adults and children with clear advice, careful surgery and honest follow-up.",
       "Clinic: Opp. Grand Modern Super Market, Benz Circle, Vijayawada. Open Monday to Saturday, 6 PM to 8 PM. Phone and WhatsApp: 99486 58699.",
