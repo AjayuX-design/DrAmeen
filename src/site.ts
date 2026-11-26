@@ -65,3 +65,20 @@ export const treatmentImage = (title: string) =>
     .replace(/'/g, "")
     .replace(/[^a-z]+/g, "-")
     .replace(/^-|-$/g, "")}.webp`
+
+/** Clinic status in India time. Open Monday to Saturday, 6 PM to 8 PM. */
+export function clinicStatus(now = new Date()) {
+  const p = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Kolkata",
+    weekday: "short",
+    hour: "numeric",
+    hour12: false,
+  }).formatToParts(now)
+  const day = p.find((x) => x.type === "weekday")!.value
+  const hour = Number(p.find((x) => x.type === "hour")!.value) % 24
+  const next = day === "Sat" || day === "Sun" ? "Monday" : "tomorrow"
+  if (day === "Sun") return "Closed today. Opens Monday at 6 PM."
+  if (hour < 18) return "Open today from 6 PM to 8 PM."
+  if (hour < 20) return "Open now until 8 PM."
+  return `Closed now. Opens ${next} at 6 PM.`
+}

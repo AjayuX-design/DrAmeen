@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { CalendarIcon, GlobeIcon, PhoneIcon } from "lucide-react"
+import { CalendarIcon, ClockIcon, GlobeIcon, PhoneIcon } from "lucide-react"
 
 import { CtaBand, CtaGroup, Section, cta } from "@/components/page"
 import { TreatmentPhotoTile } from "@/components/treatment-card"
@@ -16,15 +16,14 @@ const stats = [
 export default function Home() {
   return (
     <>
-      <section className="mx-auto grid max-w-5xl gap-10 px-5 pt-10 pb-16 md:pt-16 md:pb-20 lg:grid-cols-[1.1fr_.9fr] lg:items-stretch lg:gap-16">
+      <section className="mx-auto grid max-w-5xl gap-10 px-5 pt-10 pb-16 md:pt-16 md:pb-20 lg:min-h-[calc(100svh-4rem)] lg:grid-cols-[1.1fr_.9fr] lg:items-center lg:gap-16">
         <div className="flex flex-col gap-6 lg:justify-center">
           <h1 className="text-[2.5rem] font-extrabold md:text-6xl">
-            Expert care for your brain and spine
+            Brain and spine neurosurgeon in Vijayawada
           </h1>
           <p className="max-w-md text-lg text-muted-foreground">
-            Dr. Mohammad Abdul Ameen is a neurosurgeon in Vijayawada. He treats
-            adults and children with clear advice, careful surgery and honest
-            follow-up.
+            Dr. Mohammad Abdul Ameen treats adults and children with clear
+            advice, careful surgery and honest follow-up.
           </p>
           <CtaGroup>
             <Link to="/book" className={cta()}>
@@ -36,6 +35,10 @@ export default function Home() {
               Call us
             </a>
           </CtaGroup>
+          <p className="flex items-center gap-2 text-sm text-muted-foreground">
+            <ClockIcon className="size-4 shrink-0 text-primary" aria-hidden />
+            Open Monday to Saturday, 6 PM to 8 PM, Benz Circle
+          </p>
         </div>
         <img
           src="/images/dr-ameen.webp"
@@ -43,7 +46,7 @@ export default function Home() {
           fetchPriority="high"
           width={996}
           height={932}
-          className="aspect-[4/3] w-full rounded-3xl bg-secondary object-cover object-[50%_15%] md:aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[400px]"
+          className="aspect-[4/3] w-full rounded-3xl bg-secondary object-cover object-[50%_15%] md:aspect-[16/9] lg:aspect-auto lg:h-[min(34rem,calc(100svh-12rem))]"
         />
       </section>
 

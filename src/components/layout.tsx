@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
 import { useSeo } from "@/lib/use-seo"
-import { EMAIL, PHONE, PHONE_SHOW, nav, wa } from "@/site"
+import { EMAIL, MAP, PHONE, PHONE_SHOW, clinicStatus, nav, wa } from "@/site"
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
   `inline-flex min-h-11 items-center text-sm font-medium transition-colors ${isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"}`
@@ -116,6 +116,8 @@ function Header() {
 }
 
 function Footer() {
+  const [status, setStatus] = useState("")
+  useEffect(() => setStatus(clinicStatus()), [])
   return (
     <footer className="bleed-foreground bg-foreground pt-12 pb-32 text-sm text-background/70 md:pb-12">
       <div className="mx-auto grid max-w-5xl gap-8 px-5 md:grid-cols-[1.4fr_1fr_1fr]">
@@ -131,10 +133,18 @@ function Footer() {
           <strong className="font-heading text-base text-background">
             Dr. Ameen's Brain and Spine Clinic
           </strong>
-          <span>Opp. Grand Modern Super Market, Benz Circle, Vijayawada</span>
+          <a
+            href={MAP}
+            target="_blank"
+            rel="noopener"
+            className="inline-flex min-h-11 items-center text-background underline underline-offset-4 hover:text-background/80 md:min-h-8"
+          >
+            Opp. Grand Modern Super Market, Benz Circle, Vijayawada
+          </a>
           <span>Days: Monday to Saturday</span>
           <span>Timings: 6 PM to 8 PM</span>
           <span>Surgery at Union Hospitals, Vijayawada</span>
+          <span className="font-medium text-background">{status}</span>
           <span className="mt-2 font-medium text-background">
             Emergency? Call 108 or go to the nearest hospital.
           </span>
