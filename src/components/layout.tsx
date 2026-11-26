@@ -33,7 +33,7 @@ function Header() {
           className="flex min-h-11 items-center gap-2.5 font-heading leading-tight font-bold text-primary"
         >
           <img
-            src="/logo.png"
+            src="/logo.png?v=3"
             alt=""
             width={40}
             height={40}
@@ -117,6 +117,14 @@ function Footer() {
     <footer className="bleed-foreground bg-foreground pt-12 pb-32 text-sm text-background/70 md:pb-12">
       <div className="mx-auto grid max-w-5xl gap-8 px-5 md:grid-cols-[1.4fr_1fr_1fr]">
         <div className="flex flex-col gap-1">
+          <img
+            src="/logo.png?v=3"
+            alt=""
+            width={56}
+            height={56}
+            loading="lazy"
+            className="mb-2 size-14"
+          />
           <strong className="font-heading text-base text-background">
             Dr. Ameen's Brain and Spine Clinic
           </strong>
