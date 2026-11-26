@@ -103,6 +103,10 @@ function Footer() {
           </strong>
           <span>Opp. Grand Modern Super Market, Benz Circle, Vijayawada</span>
           <span>Open 6 PM to 8 PM</span>
+          <span>Surgery at Union Hospitals, Vijayawada</span>
+          <span className="mt-2 font-medium text-background">
+            Emergency? Call 108 or go to the nearest hospital.
+          </span>
         </div>
         <nav aria-label="Footer" className="flex flex-col">
           {nav.map(([label, to]) => (

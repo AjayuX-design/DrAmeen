@@ -44,13 +44,16 @@ export default function Book() {
           <CardContent>
             <form onSubmit={submit}>
               <FieldGroup>
+                <p className="text-sm text-muted-foreground">
+                  Fields marked * are required.
+                </p>
                 <Field>
-                  <FieldLabel htmlFor="name">Full name</FieldLabel>
+                  <FieldLabel htmlFor="name">Full name *</FieldLabel>
                   <Input id="name" name="name" required autoComplete="name" />
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="phone">
-                    Phone or WhatsApp number
+                    Phone or WhatsApp number *
                   </FieldLabel>
                   <Input
                     id="phone"
@@ -66,7 +69,7 @@ export default function Book() {
                   </FieldDescription>
                 </Field>
                 <Field>
-                  <FieldLabel htmlFor="date">Preferred date</FieldLabel>
+                  <FieldLabel htmlFor="date">Preferred date *</FieldLabel>
                   <Input
                     id="date"
                     name="date"
@@ -113,8 +116,13 @@ export default function Book() {
                   >
                     {PHONE_SHOW}
                   </a>{" "}
-                  to book. In an emergency, go to the nearest hospital. Do not
-                  wait for an appointment.
+                  to book. In an emergency, call 108 or go to the nearest
+                  hospital. Do not wait for an appointment.
+                </FieldDescription>
+                <FieldDescription>
+                  Privacy: your details are used only to confirm your visit
+                  and are not shared. Consultation fees are shared by the
+                  clinic when it confirms your slot.
                 </FieldDescription>
               </FieldGroup>
             </form>
@@ -131,6 +139,7 @@ export default function Book() {
                 "Opp. Grand Modern Super Market, Benz Circle, Vijayawada",
               ],
               [ClockIcon, "Clinic hours", "6 PM to 8 PM"],
+              [MapPinIcon, "Surgery", "Union Hospitals, Vijayawada"],
               [PhoneIcon, "Phone and WhatsApp", PHONE_SHOW],
               [MailIcon, "Email", EMAIL],
             ].map(([Icon, label, value]) => {
