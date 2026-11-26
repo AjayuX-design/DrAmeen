@@ -45,12 +45,12 @@ export const pages: Seo[] = [
     path: "/about",
     title: "About Dr. Mohammad Abdul Ameen, Neurosurgeon",
     description:
-      "MCh Neurosurgery, FICS (USA) and FCVS (Japan). More than 20 years and 5,000 brain and spine operations in Vijayawada. Read his training, career and research.",
+      "MCh Neurosurgery, FICS (USA) and FCVS (Japan). More than 20 years and 8,000 brain and spine operations in Vijayawada. Read his training, career and research.",
     image: OG_DEFAULT,
     h1: "Dr. Mohammad Abdul Ameen",
     paragraphs: [
       "Consultant Neurosurgeon at Union Hospitals, Vijayawada, with more than 20 years of experience. Medical Council of India Reg. No. 47206.",
-      "He has performed or assisted in more than 5,000 adult and pediatric brain and spine operations, and he teaches medical students and junior doctors.",
+      "He has performed or assisted in more than 8,000 adult and pediatric brain and spine operations, and he teaches medical students and junior doctors.",
     ],
     lists: [],
   },

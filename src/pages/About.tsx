@@ -64,7 +64,7 @@ export default function About() {
       {/* Who he treats */}
       <Section>
         <p className="max-w-3xl font-heading text-2xl leading-snug font-semibold text-balance md:text-4xl">
-          More than 5,000 brain and spine operations, in adults and children.
+          More than 8,000 brain and spine operations, in adults and children.
         </p>
         <p className="mt-6 max-w-2xl text-lg text-pretty text-muted-foreground">
           Dr. Ameen has performed or assisted in all of them. He treats problems
