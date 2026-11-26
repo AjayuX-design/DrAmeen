@@ -32,7 +32,7 @@ export const pages: Seo[] = [
     path: "/",
     title: "Neurosurgeon in Vijayawada | Dr. Mohammad Abdul Ameen",
     description:
-      "Dr. Ameen's Brain and Spine Clinic at Benz Circle, Vijayawada. Brain and spine surgery for adults and children. 20+ years of experience. Open Monday to Saturday, 6 PM to 8 PM.",
+      "Brain and spine surgery for adults and children at Benz Circle, Vijayawada. 20+ years of experience. Open Monday to Saturday, 6 PM to 8 PM.",
     image: OG_DEFAULT,
     h1: "Expert care for your brain and spine",
     paragraphs: [
