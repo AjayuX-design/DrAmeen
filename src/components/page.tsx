@@ -81,11 +81,11 @@ export function CtaBand() {
         <h2 className="text-3xl font-bold md:text-4xl">
           Ready to talk to Dr. Ameen?
         </h2>
-        <ul className="flex flex-col items-center gap-3 text-primary-foreground/90 lg:flex-row lg:gap-8">
+        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-primary-foreground/90">
           {clinicInfo.map(([Icon, text], i) => (
-            <li key={i} className="flex items-center gap-2 whitespace-nowrap">
+            <li key={i} className="flex items-center gap-2">
               <Icon className="size-5 shrink-0" aria-hidden />
-              {text}
+              <span className="whitespace-nowrap">{text}</span>
             </li>
           ))}
         </ul>
