@@ -38,7 +38,7 @@ export default function About() {
         current="About"
         title="Dr. Mohammad Abdul Ameen"
         lead="A neurosurgeon for adults and children, with more than 20 years of experience in brain and spine surgery."
-        art={<BannerPhoto src="/images/dr-ameen.jpg" focus="50% 12%" />}
+        art={<BannerPhoto src="/images/dr-ameen.webp" focus="50% 12%" />}
       >
         <p className="text-lg text-pretty text-muted-foreground">
           He is a consultant neurosurgeon at Union Hospitals in Vijayawada, and

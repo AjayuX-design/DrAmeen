@@ -58,10 +58,10 @@ export const societies = [
   "AO Spine Foundation",
 ] as const
 
-/** Treatment photo path from the title, e.g. "Pediatric neurosurgery" -> /images/treatments/pediatric-neurosurgery.jpg */
+/** Treatment photo path from the title, e.g. "Pediatric neurosurgery" -> /images/treatments/pediatric-neurosurgery.webp */
 export const treatmentImage = (title: string) =>
   `/images/treatments/${title
     .toLowerCase()
     .replace(/'/g, "")
     .replace(/[^a-z]+/g, "-")
-    .replace(/^-|-$/g, "")}.jpg`
+    .replace(/^-|-$/g, "")}.webp`

@@ -109,21 +109,21 @@ export function BannerMosaic() {
   return (
     <div className="grid aspect-[16/10] grid-cols-[1.2fr_1fr] grid-rows-2 gap-3 lg:aspect-auto lg:h-full lg:min-h-72">
       <img
-        src="/images/treatments/spine-surgery.jpg"
+        src="/images/treatments/spine-surgery.webp"
         alt=""
         width={1000}
         height={563}
         className={cn(img, "row-span-2")}
       />
       <img
-        src="/images/treatments/brain-tumors.jpg"
+        src="/images/treatments/brain-tumors.webp"
         alt=""
         width={1000}
         height={563}
         className={img}
       />
       <img
-        src="/images/treatments/endoscopic-spine-surgery.jpg"
+        src="/images/treatments/endoscopic-spine-surgery.webp"
         alt=""
         width={1000}
         height={563}

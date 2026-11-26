@@ -38,7 +38,7 @@ export default function Home() {
           </CtaGroup>
         </div>
         <img
-          src="/images/dr-ameen.jpg"
+          src="/images/dr-ameen.webp"
           alt="Dr. Mohammad Abdul Ameen, neurosurgeon"
           fetchPriority="high"
           width={996}
