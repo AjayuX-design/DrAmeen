@@ -94,6 +94,8 @@ export function BannerPhoto({
     <img
       src={src}
       alt=""
+      width={1000}
+      height={563}
       fetchPriority="high"
       style={{ objectPosition: focus }}
       className="aspect-[16/9] w-full rounded-3xl bg-secondary object-cover lg:aspect-auto lg:h-full lg:min-h-72"
@@ -109,12 +111,22 @@ export function BannerMosaic() {
       <img
         src="/images/treatments/spine-surgery.jpg"
         alt=""
+        width={1000}
+        height={563}
         className={cn(img, "row-span-2")}
       />
-      <img src="/images/treatments/brain-tumors.jpg" alt="" className={img} />
+      <img
+        src="/images/treatments/brain-tumors.jpg"
+        alt=""
+        width={1000}
+        height={563}
+        className={img}
+      />
       <img
         src="/images/treatments/endoscopic-spine-surgery.jpg"
         alt=""
+        width={1000}
+        height={563}
         className={img}
       />
     </div>

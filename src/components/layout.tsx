@@ -75,7 +75,17 @@ function Header() {
                   </NavLink>
                 ))}
               </nav>
-              <div className="mt-auto p-4">
+              <div className="mt-auto flex flex-col gap-3 p-4">
+                <a
+                  href={`tel:${PHONE}`}
+                  className={
+                    buttonVariants({ size: "lg", variant: "outline" }) +
+                    " w-full"
+                  }
+                >
+                  <PhoneIcon data-icon="inline-start" />
+                  Call {PHONE_SHOW}
+                </a>
                 <Link
                   to="/book"
                   onClick={() => setOpen(false)}
@@ -179,7 +189,7 @@ function Dock() {
         className={buttonVariants({ variant: "outline" })}
       >
         <MessageCircleIcon data-icon="inline-start" />
-        Chat
+        WhatsApp
       </a>
       <Link to="/book" className={buttonVariants()}>
         <CalendarIcon data-icon="inline-start" />

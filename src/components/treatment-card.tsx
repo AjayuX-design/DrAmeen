@@ -93,6 +93,9 @@ export function TreatmentPhotoTile({ t }: { t: Treatment }) {
           <img
             src={src}
             alt=""
+            width={1000}
+            height={563}
+            loading="lazy"
             style={{ objectPosition: t.focus ?? "50% 50%" }}
             className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none"
           />
@@ -133,6 +136,9 @@ export function TreatmentMiniTile({ t }: { t: Treatment }) {
           <img
             src={src}
             alt=""
+            width={1000}
+            height={563}
+            loading="lazy"
             style={{ objectPosition: t.focus ?? "50% 50%" }}
             className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none"
           />

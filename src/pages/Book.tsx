@@ -1,4 +1,4 @@
-import { type FormEvent } from "react"
+import { type FormEvent, useState } from "react"
 import {
   CalendarIcon,
   ClockIcon,
@@ -24,10 +24,42 @@ import { EMAIL, MAP, PHONE, PHONE_SHOW, wa } from "@/site"
 
 const today = new Date().toISOString().slice(0, 10)
 
+type Errors = Partial<Record<"name" | "phone" | "date", string>>
+
+function validate(d: FormData): Errors {
+  const e: Errors = {}
+  if (!String(d.get("name")).trim()) e.name = "Enter your full name."
+  if (String(d.get("phone")).replace(/\D/g, "").length < 8)
+    e.phone = "Enter a phone number with at least 8 digits."
+  const date = String(d.get("date"))
+  if (!date) e.date = "Pick a date."
+  else if (date < today) e.date = "Pick today or a later date."
+  else if (new Date(date + "T00:00").getDay() === 0)
+    e.date = "The clinic is closed on Sundays. Pick Monday to Saturday."
+  return e
+}
+
 export default function Book() {
+  const [errors, setErrors] = useState<Errors>({})
+  const err = (k: keyof Errors) =>
+    errors[k] ? (
+      <p id={`${k}-error`} role="alert" className="text-sm text-destructive">
+        {errors[k]}
+      </p>
+    ) : null
+  const bad = (k: keyof Errors) =>
+    errors[k] ? { "aria-invalid": true, "aria-describedby": `${k}-error` } : {}
   const submit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const d = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const d = new FormData(form)
+    const found = validate(d)
+    setErrors(found)
+    const first = Object.keys(found)[0]
+    if (first) {
+      form.querySelector<HTMLElement>(`#${first}`)?.focus()
+      return
+    }
     const msg = `Appointment request\nName: ${d.get("name")}\nPhone: ${d.get("phone")}\nDate: ${d.get("date")}\nTime: ${d.get("time")}\nType: ${d.get("type")}\nProblem: ${d.get("issue") || "-"}`
     window.open(wa(msg), "_blank", "noopener")
   }
@@ -42,14 +74,21 @@ export default function Book() {
       <Section className="grid gap-10 md:grid-cols-[1.1fr_.9fr] md:gap-16">
         <Card className="bg-muted ring-0">
           <CardContent>
-            <form onSubmit={submit}>
+            <form onSubmit={submit} noValidate>
               <FieldGroup>
                 <p className="text-sm text-muted-foreground">
                   Fields marked * are required.
                 </p>
                 <Field>
                   <FieldLabel htmlFor="name">Full name *</FieldLabel>
-                  <Input id="name" name="name" required autoComplete="name" />
+                  <Input
+                    id="name"
+                    name="name"
+                    required
+                    autoComplete="name"
+                    {...bad("name")}
+                  />
+                  {err("name")}
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="phone">
@@ -63,7 +102,9 @@ export default function Book() {
                     required
                     autoComplete="tel"
                     placeholder="Your mobile number"
+                    {...bad("phone")}
                   />
+                  {err("phone")}
                   <FieldDescription>
                     Add your country code if you are outside India.
                   </FieldDescription>
@@ -76,7 +117,12 @@ export default function Book() {
                     type="date"
                     min={today}
                     required
+                    {...bad("date")}
                   />
+                  <FieldDescription>
+                    The clinic is open Monday to Saturday.
+                  </FieldDescription>
+                  {err("date")}
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="time">Preferred time</FieldLabel>
@@ -85,6 +131,9 @@ export default function Book() {
                     <NativeSelectOption>7 PM to 8 PM</NativeSelectOption>
                     <NativeSelectOption>No preference</NativeSelectOption>
                   </NativeSelect>
+                  <FieldDescription>
+                    The clinic will confirm your exact slot.
+                  </FieldDescription>
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="type">Visit type</FieldLabel>
@@ -116,13 +165,20 @@ export default function Book() {
                   >
                     {PHONE_SHOW}
                   </a>{" "}
+                  or email{" "}
+                  <a
+                    className="font-semibold text-primary underline underline-offset-4"
+                    href={`mailto:${EMAIL}`}
+                  >
+                    {EMAIL}
+                  </a>{" "}
                   to book. In an emergency, call 108 or go to the nearest
                   hospital. Do not wait for an appointment.
                 </FieldDescription>
                 <FieldDescription>
-                  Privacy: your details are used only to confirm your visit
-                  and are not shared. Consultation fees are shared by the
-                  clinic when it confirms your slot.
+                  Privacy: your details are used only to confirm your visit and
+                  are not shared. Consultation fees are shared by the clinic
+                  when it confirms your slot.
                 </FieldDescription>
               </FieldGroup>
             </form>

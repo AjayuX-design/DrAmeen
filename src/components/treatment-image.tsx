@@ -38,7 +38,14 @@ export function TreatmentImage({
         "-mt-(--card-spacing) aspect-[16/9] w-full overflow-hidden bg-secondary"
       }
     >
-      <img src={src} alt="" loading="lazy" className="size-full object-cover" />
+      <img
+        src={src}
+        alt=""
+        width={1000}
+        height={563}
+        loading="lazy"
+        className="size-full object-cover"
+      />
     </div>
   )
 }
@@ -53,6 +60,8 @@ export function TreatmentBanner({ title }: { title: string }) {
       <img
         src={src}
         alt=""
+        width={1000}
+        height={563}
         className="aspect-[16/9] w-full rounded-3xl bg-secondary object-cover object-[50%_30%] sm:aspect-[5/2]"
       />
     </div>
