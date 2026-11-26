@@ -15,6 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { Separator } from "@/components/ui/separator"
 import { useSeo } from "@/lib/use-seo"
 import { EMAIL, PHONE, PHONE_SHOW, nav, wa } from "@/site"
 
@@ -127,6 +128,25 @@ function Footer() {
           >
             {EMAIL}
           </a>
+        </div>
+      </div>
+      <div className="mx-auto mt-10 max-w-5xl px-5">
+        <Separator className="bg-background/15" />
+        <div className="flex flex-col gap-1 pt-4 md:flex-row md:items-center md:justify-between">
+          <p>
+            &copy; {new Date().getFullYear()} Dr. Ameen's Brain and Spine Clinic
+          </p>
+          <p className="flex items-center gap-1.5">
+            Designed by
+            <a
+              href="https://www.pixxelnesst.com/"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex min-h-11 items-center font-semibold text-background underline underline-offset-4 hover:text-background/80 md:min-h-8"
+            >
+              Pixxelnesst
+            </a>
+          </p>
         </div>
       </div>
     </footer>
