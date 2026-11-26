@@ -100,7 +100,7 @@ export default function Home() {
           <CtaGroup className="mt-2">
             <Link to="/international" className={cta()}>
               <GlobeIcon data-icon="inline-start" />
-              International patients
+              International Patient
             </Link>
           </CtaGroup>
         </div>

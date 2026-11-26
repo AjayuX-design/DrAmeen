@@ -25,7 +25,7 @@ export const nav = [
   ["Home", "/"],
   ["About", "/about"],
   ["Treatments", "/treatments"],
-  ["International", "/international"],
+  ["International Patient", "/international"],
   ["Book a visit", "/book"],
 ] as const
 

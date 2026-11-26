@@ -1,5 +1,4 @@
-import { Link } from "react-router"
-import { ArrowRightIcon, MailIcon, MessageCircleIcon } from "lucide-react"
+import { MailIcon, MessageCircleIcon } from "lucide-react"
 
 import { PageBanner } from "@/components/banner"
 import { CtaBand, CtaGroup, Section, cta } from "@/components/page"
@@ -20,19 +19,19 @@ import { EMAIL, steps, wa } from "@/site"
 const faqs = [
   [
     "What should I send?",
-    "Your MRI and CT scans, your medical reports, a list of your medicines, and a short note about your problem and when it started.",
+    "MRI and CT scans, medical reports, a list of your medicines, and a short note on your problem and when it started.",
   ],
   [
     "How do I send it?",
-    "Send it on WhatsApp or by email. Large scan files can be shared with a download link.",
+    "On WhatsApp or by email. For large scan files, share a download link.",
   ],
   [
     "Can I have a video consultation?",
-    "You can choose video consultation in the booking form. The clinic will confirm if it suits your case.",
+    "Choose video consultation in the booking form. The clinic confirms if it suits your case.",
   ],
   [
     "When should I travel?",
-    "Wait for the opinion on your reports first. Then pick a date with the clinic. Clinic hours are Monday to Saturday, 6 PM to 8 PM.",
+    "Wait for the opinion on your reports first, then pick a date with the clinic. The clinic is open Monday to Saturday, 6 PM to 8 PM.",
   ],
 ] as const
 
@@ -41,9 +40,9 @@ export default function International() {
     <>
       <PageBanner
         trail={[["Home", "/"]]}
-        current="International patients"
+        current="International Patient"
         title="Living abroad? Start with your reports"
-        lead="Send your scans first. You will know what to expect before you plan any travel."
+        lead="Send your scans first. Know what to expect before you plan any travel."
       />
       <Section>
         <h2 className="sr-only">How it works</h2>
@@ -82,17 +81,9 @@ export default function International() {
           </a>
         </CtaGroup>
       </Section>
-      <Section tint className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
-        <div className="flex flex-col gap-6">
-          <h2 className="text-3xl font-bold md:text-5xl">Common questions</h2>
-          <CtaGroup>
-            <Link to="/book" className={cta("secondary")}>
-              Book a visit instead
-              <ArrowRightIcon data-icon="inline-end" />
-            </Link>
-          </CtaGroup>
-        </div>
-        <Accordion defaultValue={[faqs[0][0]]}>
+      <Section tint className="flex flex-col gap-6">
+        <h2 className="text-3xl font-bold">Common questions</h2>
+        <Accordion defaultValue={[faqs[0][0]]} className="max-w-3xl">
           {faqs.map(([q, a]) => (
             <AccordionItem key={q} value={q}>
               <AccordionTrigger>{q}</AccordionTrigger>

@@ -21,7 +21,7 @@ const nav = [
   ["Home", "/"],
   ["About", "/about"],
   ["Treatments", "/treatments"],
-  ["International patients", "/international"],
+  ["International Patient", "/international"],
   ["Book a visit", "/book"],
 ] as const
 

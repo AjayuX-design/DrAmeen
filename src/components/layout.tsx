@@ -46,7 +46,10 @@ function Header() {
             </span>
           </span>
         </Link>
-        <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
+        <nav
+          aria-label="Main"
+          className="hidden items-center gap-5 md:flex lg:gap-8"
+        >
           {links.map(([label, to]) => (
             <NavLink key={to} to={to} end={to === "/"} className={linkClass}>
               {label}
