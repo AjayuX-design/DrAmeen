@@ -42,7 +42,7 @@ export default function About() {
       >
         <p className="text-lg text-pretty text-muted-foreground">
           He is a consultant neurosurgeon at Union Hospitals in Vijayawada, and
-          he sees patients at his clinic in Benz Circle from 6 PM to 8 PM.
+          he sees patients at his clinic in Benz Circle from 6 PM to 8 PM, Monday to Saturday.
         </p>
         <CtaGroup>
           <Link to="/book" className={cta()}>

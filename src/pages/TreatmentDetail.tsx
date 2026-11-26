@@ -189,7 +189,7 @@ export default function TreatmentDetail() {
                     className="mt-0.5 size-5 shrink-0 text-primary"
                     aria-hidden
                   />
-                  6 PM to 8 PM
+                  Monday to Saturday, 6 PM to 8 PM
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPinIcon

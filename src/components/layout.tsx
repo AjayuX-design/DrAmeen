@@ -102,7 +102,7 @@ function Footer() {
             Dr. Ameen's Brain and Spine Clinic
           </strong>
           <span>Opp. Grand Modern Super Market, Benz Circle, Vijayawada</span>
-          <span>Open 6 PM to 8 PM</span>
+          <span>Open Monday to Saturday, 6 PM to 8 PM</span>
           <span>Surgery at Union Hospitals, Vijayawada</span>
           <span className="mt-2 font-medium text-background">
             Emergency? Call 108 or go to the nearest hospital.

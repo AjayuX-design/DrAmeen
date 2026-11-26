@@ -138,7 +138,7 @@ export default function Book() {
                 "Dr. Ameen's Brain and Spine Clinic",
                 "Opp. Grand Modern Super Market, Benz Circle, Vijayawada",
               ],
-              [ClockIcon, "Clinic hours", "6 PM to 8 PM"],
+              [ClockIcon, "Clinic hours", "Monday to Saturday, 6 PM to 8 PM"],
               [MapPinIcon, "Surgery", "Union Hospitals, Vijayawada"],
               [PhoneIcon, "Phone and WhatsApp", PHONE_SHOW],
               [MailIcon, "Email", EMAIL],

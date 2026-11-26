@@ -63,7 +63,7 @@ export function Section({
 }
 
 const clinicInfo = [
-  [ClockIcon, <>Open 6 PM to 8 PM</>],
+  [ClockIcon, <>Open Monday to Saturday, 6 PM to 8 PM</>],
   [
     MapPinIcon,
     <>

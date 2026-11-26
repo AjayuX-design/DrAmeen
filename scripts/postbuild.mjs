@@ -21,7 +21,7 @@ function fallback(page) {
   return (
     `<noscript><header><p><a href="/">Dr. Ameen's Brain and Spine Clinic, Vijayawada</a></p><nav><ul>${nav}</ul></nav></header>` +
     `<main><h1>${esc(page.h1)}</h1>${paras}${lists}</main>` +
-    `<footer><p>Dr. Ameen's Brain and Spine Clinic, Opp. Grand Modern Super Market, Benz Circle, Vijayawada. Open 6 PM to 8 PM. 99486 58699. info@drameen.com</p></footer></noscript>`
+    `<footer><p>Dr. Ameen's Brain and Spine Clinic, Opp. Grand Modern Super Market, Benz Circle, Vijayawada. Open Monday to Saturday, 6 PM to 8 PM. 99486 58699. info@drameen.com</p></footer></noscript>`
   )
 }
 

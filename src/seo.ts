@@ -32,12 +32,12 @@ export const pages: Seo[] = [
     path: "/",
     title: "Neurosurgeon in Vijayawada | Dr. Mohammad Abdul Ameen",
     description:
-      "Dr. Ameen's Brain and Spine Clinic at Benz Circle, Vijayawada. Brain and spine surgery for adults and children. Over 20 years of experience. Open 6 PM to 8 PM.",
+      "Dr. Ameen's Brain and Spine Clinic at Benz Circle, Vijayawada. Brain and spine surgery for adults and children. 20+ years of experience. Open Monday to Saturday, 6 PM to 8 PM.",
     image: OG_DEFAULT,
     h1: "Expert care for your brain and spine",
     paragraphs: [
       "Dr. Mohammad Abdul Ameen is a neurosurgeon in Vijayawada. He treats adults and children with clear advice, careful surgery and honest follow-up.",
-      "Clinic: Opp. Grand Modern Super Market, Benz Circle, Vijayawada. Open 6 PM to 8 PM. Phone and WhatsApp: 99486 58699.",
+      "Clinic: Opp. Grand Modern Super Market, Benz Circle, Vijayawada. Open Monday to Saturday, 6 PM to 8 PM. Phone and WhatsApp: 99486 58699.",
     ],
     lists: [{ title: "What we treat", items: treatments.map((t) => t.title) }],
   },
@@ -83,11 +83,11 @@ export const pages: Seo[] = [
     path: "/book",
     title: "Book a Visit with Neurosurgeon Dr. Ameen | Vijayawada",
     description:
-      "Request an appointment with Dr. Ameen at Benz Circle, Vijayawada. Clinic hours 6 PM to 8 PM. Call or WhatsApp 99486 58699.",
+      "Request an appointment with Dr. Ameen at Benz Circle, Vijayawada. Clinic hours Monday to Saturday, 6 PM to 8 PM. Call or WhatsApp 99486 58699.",
     image: OG_DEFAULT,
     h1: "Book a visit",
     paragraphs: [
-      "Clinic: Opp. Grand Modern Super Market, Benz Circle, Vijayawada. Open 6 PM to 8 PM. Call or WhatsApp 99486 58699.",
+      "Clinic: Opp. Grand Modern Super Market, Benz Circle, Vijayawada. Open Monday to Saturday, 6 PM to 8 PM. Call or WhatsApp 99486 58699.",
     ],
     lists: [],
   },

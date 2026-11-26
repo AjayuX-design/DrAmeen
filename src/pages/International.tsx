@@ -32,7 +32,7 @@ const faqs = [
   ],
   [
     "When should I travel?",
-    "Wait for the opinion on your reports first. Then pick a date with the clinic. Clinic hours are 6 PM to 8 PM.",
+    "Wait for the opinion on your reports first. Then pick a date with the clinic. Clinic hours are Monday to Saturday, 6 PM to 8 PM.",
   ],
 ] as const
 
