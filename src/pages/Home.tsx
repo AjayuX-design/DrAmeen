@@ -8,7 +8,7 @@ import { treatments } from "@/treatments"
 
 const stats = [
   ["20+", "years of experience"],
-  ["8,000+", "brain and spine surgeries"],
+  ["10,000+", "brain and spine surgeries"],
   ["3", "fellowships"],
   ["9", "published papers"],
 ] as const
