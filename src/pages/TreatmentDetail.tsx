@@ -185,11 +185,18 @@ export default function TreatmentDetail() {
             <CardContent className="flex flex-col gap-5">
               <ul className="flex flex-col gap-3 text-[15px]">
                 <li className="flex items-start gap-3">
+                  <CalendarIcon
+                    className="mt-0.5 size-5 shrink-0 text-primary"
+                    aria-hidden
+                  />
+                  Days: Monday to Saturday
+                </li>
+                <li className="flex items-start gap-3">
                   <ClockIcon
                     className="mt-0.5 size-5 shrink-0 text-primary"
                     aria-hidden
                   />
-                  Monday to Saturday, 6 PM to 8 PM
+                  Timings: 6 PM to 8 PM
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPinIcon
