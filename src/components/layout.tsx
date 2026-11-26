@@ -30,11 +30,20 @@ function Header() {
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5">
         <Link
           to="/"
-          className="flex min-h-11 flex-col justify-center font-heading leading-tight font-bold text-primary"
+          className="flex min-h-11 items-center gap-2.5 font-heading leading-tight font-bold text-primary"
         >
-          Dr. Ameen's
-          <span className="block text-xs font-medium tracking-wide text-muted-foreground uppercase">
-            Brain and Spine Clinic
+          <img
+            src="/logo.png"
+            alt=""
+            width={40}
+            height={40}
+            className="size-10 shrink-0"
+          />
+          <span className="flex flex-col">
+            Dr. Ameen's
+            <span className="block text-xs font-medium tracking-wide text-muted-foreground uppercase">
+              Brain and Spine Clinic
+            </span>
           </span>
         </Link>
         <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
