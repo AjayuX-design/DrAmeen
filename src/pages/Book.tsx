@@ -196,7 +196,7 @@ export default function Book() {
               ],
               [CalendarIcon, "Days", "Monday to Saturday"],
               [ClockIcon, "Timings", "6 PM to 8 PM"],
-              [MapPinIcon, "Surgery", "Union Hospitals, Vijayawada"],
+              [MapPinIcon, "Surgery", "Sentini City Hospital, Vijayawada"],
               [PhoneIcon, "Phone and WhatsApp", PHONE_SHOW],
               [MailIcon, "Email", EMAIL],
             ].map(([Icon, label, value]) => {

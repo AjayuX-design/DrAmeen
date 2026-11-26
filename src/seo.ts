@@ -49,7 +49,7 @@ export const pages: Seo[] = [
     image: OG_DEFAULT,
     h1: "Dr. Mohammad Abdul Ameen",
     paragraphs: [
-      "Consultant Neurosurgeon at Union Hospitals, Vijayawada, with more than 20 years of experience. Medical Council of India Reg. No. 47206.",
+      "Consultant Neurosurgeon at Sentini City Hospital, Vijayawada, with more than 20 years of experience. Medical Council of India Reg. No. 47206.",
       "He has performed or assisted in more than 10,000 adult and pediatric brain and spine operations, and he teaches medical students and junior doctors.",
     ],
     lists: [],
