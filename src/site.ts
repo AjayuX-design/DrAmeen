@@ -21,69 +21,6 @@ export const steps = [
   ],
 ] as const
 
-/** [year, what, where] from the resume, newest first. */
-export const education = [
-  [
-    "2019",
-    "Fellowship in advanced neuroendoscopy",
-    "Netaji Subhash Chandra Bose Medical College, Jabalpur",
-  ],
-  [
-    "2018",
-    "FCVS: cerebrovascular, endovascular and skull base surgery",
-    "Fujita Health University, Nagoya, Japan",
-  ],
-  [
-    "2018",
-    "FICS: Fellow of the International College of Surgeons",
-    "Chicago, USA",
-  ],
-  ["2017", "Spine Masters teaching course", "Dr. Ramani, Mumbai"],
-  [
-    "2014",
-    "MCh in Neurosurgery",
-    "Sri Venkateswara Institute of Medical Sciences, Tirupati",
-  ],
-  ["2014", "Walter E. Dandy educational neurosurgical course", "Mamallapuram"],
-  [
-    "2010",
-    "MS in General Surgery",
-    "Krishna Institute of Medical Sciences, Karad",
-  ],
-  ["2000", "MBBS", "Al-Ameen Medical College"],
-] as const
-
-export const career = [
-  ["From 2021", "Consultant Neurosurgeon", "Union Hospitals, Vijayawada"],
-  ["2020 to 2021", "Consultant Neurosurgeon", "Srikara Hospitals, Vijayawada"],
-  [
-    "2015 to 2020",
-    "Consultant Neurosurgeon",
-    "Aayush NRI Healthcare, Vijayawada",
-  ],
-  ["2015", "Consultant Neurosurgeon", "Jayshree Liberty Hospitals, Vijayawada"],
-  [
-    "2014 to 2015",
-    "Senior Resident, Neurosurgery",
-    "Andhra Pradesh state government, Vijayawada",
-  ],
-  [
-    "2011",
-    "Assistant Professor, General Surgery",
-    "NRI Academy of Medical Sciences, Chinakakani",
-  ],
-  [
-    "2005 to 2007",
-    "Tutor, Neurosurgery",
-    "NRI Academy of Medical Sciences, Chinakakani",
-  ],
-  [
-    "2002 to 2004",
-    "Junior Resident, Neurosurgery",
-    "Apollo Hospitals, Hyderabad",
-  ],
-] as const
-
 export const nav = [
   ["Home", "/"],
   ["About", "/about"],
