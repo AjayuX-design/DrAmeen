@@ -20,7 +20,7 @@ import { useSeo } from "@/lib/use-seo"
 import { EMAIL, PHONE, PHONE_SHOW, nav, wa } from "@/site"
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
-  `text-sm font-medium transition-colors ${isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"}`
+  `inline-flex min-h-11 items-center text-sm font-medium transition-colors ${isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"}`
 
 function Header() {
   const [open, setOpen] = useState(false)
