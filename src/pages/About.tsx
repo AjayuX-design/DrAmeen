@@ -41,7 +41,7 @@ export default function About() {
         art={<BannerPhoto src="/images/dr-ameen.webp" focus="50% 12%" />}
       >
         <p className="text-lg text-pretty text-muted-foreground">
-          He is a consultant neurosurgeon at Sentini City Hospital in Vijayawada, and
+          He is a consultant neurosurgeon at Sentini City Hospital in Vijayawada (10 AM to 5 PM), and
           he sees patients at his clinic in Benz Circle from 6 PM to 8 PM, Monday to Saturday.
         </p>
         <CtaGroup>

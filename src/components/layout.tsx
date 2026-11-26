@@ -143,7 +143,7 @@ function Footer() {
           </a>
           <span>Days: Monday to Saturday</span>
           <span>Timings: 6 PM to 8 PM</span>
-          <span>Surgery at Sentini City Hospital, Vijayawada</span>
+          <span>Sentini City Hospital, Vijayawada: 10 AM to 5 PM</span>
           <span className="font-medium text-background">{status}</span>
           <span className="mt-2 font-medium text-background">
             Emergency? Call 108 or go to the nearest hospital.
